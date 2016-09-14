@@ -8,3 +8,6 @@ puts "#{simpleExpression} = #{Calculator.evaluate(simpleExpression)}"
 arrayOperator = lambda {|a, b| a | b}
 arrayExpression = Expression.new(Operand.new([1,2,3,4]), Operand.new([5,6,7,8]), FunctionOperator.new(&arrayOperator))
 puts "#{arrayExpression} = #{Calculator.evaluate(arrayExpression)}"
+
+logicExpression = Expression.new(Operand.new(2), Operand.new(8), Operator.new("!="))
+puts "#{logicExpression} = #{Calculator.evaluate(logicExpression)}"
