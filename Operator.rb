@@ -3,7 +3,12 @@ class Operator
 	@operator = nil
 
 	def initialize(operator)
-		@operator = operator
+		case operator
+			when Symbol
+				@operator = operator
+			when String
+				@operator = operator.to_sym
+		end
 	end
 
 	def operator
